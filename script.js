@@ -1,5 +1,5 @@
 
-// VALIDAÇÃO E SIMULAÇÃO DE FORMULÁRIO
+// Validação e simulação do formulário
 
 const formContato = document.getElementById('formContato');
 const feedbackMensagem = document.getElementById('feedbackMensagem');
@@ -32,12 +32,12 @@ function validarEEnviarFormulario() {
     document.getElementById('email').value = '';
     document.getElementById('mensagem').value = '';
 
-    // Exibe a mensagem de sucesso
+    // Exibe a mensagem de envio
     feedbackMensagem.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
     feedbackMensagem.style.color = 'green';
     feedbackMensagem.style.display = 'block';
     
-    // Oculta a mensagem após 5 segundos
+    // Oculta a mensagem de envio após 5 segundos
     setTimeout(() => {
         feedbackMensagem.style.display = 'none';
     }, 5000); 

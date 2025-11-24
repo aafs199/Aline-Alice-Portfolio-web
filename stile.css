@@ -1,6 +1,6 @@
-/* -------------------------------------- */
-/* 1. RESET, TIPOGRAFIA E TEMA CLARO PADRÃO */
-/* -------------------------------------- */
+
+/* Reset, tipografia e tema claro padrão */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     transition: background-color 0.5s, color 0.5s; /* Transição suave */
 }
 
-/* Estilo do cabeçalho no tema CLARO */
+/* Estilo do cabeçalho no tema claro */
 header {
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@ header {
 }
 
 nav {
-    display: flex; /* Permite colocar o menu e o botão lado a lado */
+    display: flex; /* Permite colocar o menu e o botão do tema lado a lado */
     justify-content: center;
     align-items: center;
     padding: 10px 0;
@@ -87,9 +87,9 @@ section h1 {
     padding-bottom: 10px;
 }
 
-/* -------------------------------------- */
-/* 2. REGRAS DO TEMA ESCURO */
-/* -------------------------------------- */
+
+/* Regras do tema escuro */
+
 
 body.tema-escuro {
     background-color: #121212; 
@@ -127,38 +127,38 @@ body.tema-escuro #formContato button {
     background-color: #0099ff;
 }
 
-/* Estilo para o texto na seção "Sobre mim" justifica o texto */
+/* Justifica o texto "Sobre mim" */
 #sobre p {
     
     text-align: justify;
    
 }
-/* -------------------------------------- */
-/* AJUSTES PARA SMARTPHONES */
-/* -------------------------------------- */
+
+/* Ajuste para smartphones */
+
 @media (max-width: 600px) {
     
-    /* 1. Ajuste do Menu de Navegação */
+    /* Ajuste do Menu de Navegação */
     header 
     nav ul {
-        /* Empilha os links verticalmente em telas pequenas */
+        /* Empilha os links em telas pequenas */
         flex-direction: column; 
         padding: 5px 0;
     }
     
     nav ul li a {
-        /* Dá mais espaço para cada link tocar */
+        /* Adiciona espaço para o clique */
         padding: 10px;
         text-align: center;
-        width: 100%; /* Ocupa a largura total */
+        width: 100%; /* Ocupa a largura total da tela*/
     }
 
-    /* 2. Ajuste das Seções */
+    /*  Ajuste das Seções */
     section {
-        /* Reduz o padding interno para usar melhor o espaço da tela */
+        /* Ajusta o espaço da tela */
         padding: 20px 10px;
         margin: 10px auto;
-        border-radius: 0; /* Remove bordas arredondadas para um visual mais nativo */
+        border-radius: 0; /* Remove bordas arredondadas */
     }
 
     /* Aumenta a compensação para a altura do menu empilhado no celular */
@@ -180,12 +180,9 @@ header {
 /* Ajuste para que o título da seção não fique escondido sob o menu fixo */
 /* PARA TODOS OS TIPOS DE TELA */
 section:target {
-    /* MOVE A SEÇÃO PARA CIMA: margem superior negativa */
+    /* margem superior negativa: move a seção para cima */
     margin-top: -120px; 
     
-    /* CRIA ESPAÇO: padding superior positivo igual ao valor negativo acima */
-    padding-top: 120px; 
-    
-    /* Evita que o padding-top negativo afete o resto da rolagem */
-  
+    /* valor positivo igual ao valor negativo acima para compensação */
+    padding-top: 120px;  
 }
